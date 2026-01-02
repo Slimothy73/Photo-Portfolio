@@ -9,20 +9,44 @@
 <body>
     <header>
         <nav>
-            <h1>Photo Portfolio</h1>
+            <h1>tim hudson</h1>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home">home</a></li>
+                <li><a href="Gallery.html">gallery</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <!-- Content goes here -->
+    
+        
+        <div class="featured-section">
+            <div class="featured-text">
+                <h2>featured photo of the month</h2>
+                <p>i took this photo of a random building in dc at sunset and i really like it</p>
+            </div>
+            <div class="highlighted-photo-card">
+                <img src="Photos/DCSunset.JPG" alt="Fountain" class="main-photo">
+                <div class="photo-details">
+                    <h3>dc building at sunset</h3>
+                    <p>Fujifilm X100VI</p>
+                </div>
+            </div>
+        </div>
+        
     </main>
     <footer>
-        <p>&copy; 2024 Photo Portfolio. All rights reserved.</p>
+        <p>&copy; 2026. All photos owned by Tim Hudson. <a href="https://instagram.com/timhud.jpg" target="_blank">Click here for inquiries.</a></p>
     </footer>
+
+    <!-- Fullscreen Modal -->
+    <div id="fullscreenModal" class="fullscreen-modal">
+        <span class="close">&times;</span>
+        <div class="fullscreen-container">
+            <img class="fullscreen-image" src="" alt="">
+            <div class="fullscreen-details"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

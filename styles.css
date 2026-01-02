@@ -1,0 +1,319 @@
+/* Photo Portfolio Stylesheet */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #c1bbbb;
+}
+
+header {
+    background-color: #2f056a;
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(113, 7, 234, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+nav h1 {
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #3498db;
+}
+
+main {
+    max-width: 100%;
+    margin: 0;
+    padding: 2rem;
+    min-height: 90vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+main > h1 {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+main > p {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.instagram-feed-container {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    width: 100%;
+    max-width: 100%;
+}
+
+.featured-section {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    flex: 1;
+}
+
+.featured-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-transform: lowercase;
+    letter-spacing: 0.5px;
+    
+}
+
+.featured-text h2 {
+    margin: 0 0 1.5rem 0;
+    font-weight: 100000000;
+}
+
+.featured-text p {
+    margin: 0;
+    font-size: larger;
+}
+
+.highlighted-photo-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.main-photo {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.photo-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.highlighted-photo-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.photo-card.vertical {
+    grid-row: span 2;
+}
+
+.photo-card:hover .main-photo {
+    transform: scale(1.1);
+}
+
+.photo-details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    color: white;
+    padding: 2rem 1rem 1rem;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.photo-card:hover .photo-details {
+    transform: translateY(0);
+}
+
+.photo-details h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.3rem;
+}
+
+.photo-details p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+footer {
+    background-color: #2f056a;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #3498db;
+}
+
+.fullscreen-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.fullscreen-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.fullscreen-image {
+    max-width: 100%;
+    max-height: 70vh;
+    object-fit: contain;
+    margin-bottom: 2rem;
+}
+
+.fullscreen-details {
+    color: white;
+    text-align: center;
+}
+
+.fullscreen-details h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1.5rem;
+}
+
+.fullscreen-details p {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.close:hover {
+    color: #ccc;
+}
+
+.social-logo-container {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0;
+}
+
+.flickr-logo {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    width: 100%;
+    max-width: 300px;
+}
+
+.flickr-logo img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.better-good {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    align-items: start;
+    margin: 4rem 0;
+}
+
+/* Remove forced full-width inside the split */
+.better-good .instagram-feed-container,
+.better-good .social-logo-container {
+    grid-column: auto;
+    margin: 0;
+    width: 100%;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+    .better-good {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
