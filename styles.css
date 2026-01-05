@@ -329,4 +329,36 @@ footer a:hover {
         text-align: center;
     }
 }
+/* Tablet */
+@media (max-width: 900px) {
+    main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .photo-card.vertical {
+        grid-row: auto;
+    }
+}
+
+/* Phone */
+@media (max-width: 600px) {
+    main {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+
+    .photo-card {
+        width: 100%;
+    }
+
+    .photo-details {
+        transform: translateY(0);
+        background: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.8),
+            rgba(0, 0, 0, 0.2)
+        );
+    }
+}
+
 
